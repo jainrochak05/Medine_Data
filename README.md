@@ -1,20 +1,22 @@
-# Medicine Info API
+# 🌟 Medicine Info API
 
 This API provides detailed information about medicines based on a dataset of medical information. Users can query the API by providing a medicine name, and the API will return information such as composition, uses, and side effects. The API is built using Flask and includes robust error handling to ensure reliability.
 
-## Features
-- Retrieve medicine information such as composition, uses, and side effects.
-- Perform partial match searches for medicine names.
-- Detailed error messages for invalid inputs or missing data.
-- Easily extensible to support additional features or data sources.
+---
+
+## ✨ Features
+- 🔍 Retrieve medicine information such as composition, uses, and side effects.
+- 📜 Perform partial match searches for medicine names.
+- ⚠️ Detailed error messages for invalid inputs or missing data.
+- 🔧 Easily extensible to support additional features or data sources.
 
 ---
 
-## Installation
+## 🚀 Installation
 
 ### Prerequisites
-- Python 3.8 or later
-- `pip` package manager
+- 🐍 Python 3.8 or later
+- 📦 `pip` package manager
 
 ### Steps
 1. Clone the repository:
@@ -43,12 +45,19 @@ This API provides detailed information about medicines based on a dataset of med
 
 ---
 
-## API Endpoints
+## 🌐 Live Deployment
+This API is deployed on Render and can be accessed directly using the following link:
+
+[https://medicine-data-lstd.onrender.com/get_medicine_info](https://medicine-data-lstd.onrender.com/get_medicine_info)
+
+---
+
+## 📡 API Endpoints
 
 ### 1. `/get_medicine_info` (POST)
 **Description**: Retrieves information about a medicine based on the provided name.
 
-#### Request
+#### 📨 Request
 - **Method**: POST
 - **Headers**: `Content-Type: application/json`
 - **Body**:
@@ -58,7 +67,7 @@ This API provides detailed information about medicines based on a dataset of med
   }
   ```
   
-#### Response
+#### ✅ Response
 - **Success** (200):
   ```json
   [
@@ -91,21 +100,22 @@ This API provides detailed information about medicines based on a dataset of med
 
 ---
 
-## Dataset Requirements
+## 📂 Dataset Requirements
 The dataset file `medicine_data.csv` should include the following columns:
-- `Medicine Name`: The name of the medicine.
-- `Composition`: The active ingredients of the medicine.
-- `Uses`: The purpose or condition the medicine is used for.
-- `Side_effects`: Potential side effects of the medicine.
+- **`Medicine Name`**: The name of the medicine.
+- **`Composition`**: The active ingredients of the medicine.
+- **`Uses`**: The purpose or condition the medicine is used for.
+- **`Side_effects`**: Potential side effects of the medicine.
 
 Ensure all columns are named correctly and that the data is clean for optimal API functionality.
 
 ---
 
-## Example Usage
+## 🛠 Example Usage
+
 ### Sample cURL Request
 ```bash
-curl -X POST http://127.0.0.1:5000/get_medicine_info \
+curl -X POST https://medicine-data-lstd.onrender.com/get_medicine_info \
 -H "Content-Type: application/json" \
 -d '{"medicine_name": "Paracetamol"}'
 ```
@@ -114,7 +124,7 @@ curl -X POST http://127.0.0.1:5000/get_medicine_info \
 ```python
 import requests
 
-url = "http://127.0.0.1:5000/get_medicine_info"
+url = "https://medicine-data-lstd.onrender.com/get_medicine_info"
 data = {"medicine_name": "Paracetamol"}
 response = requests.post(url, json=data)
 print(response.json())
@@ -122,7 +132,7 @@ print(response.json())
 
 ---
 
-## Error Handling
+## ⚙️ Error Handling
 The API is designed to handle various errors gracefully:
 1. **Missing Dataset**: If the dataset file is not found, the API will return a 500 error.
 2. **Invalid Input**: If the medicine name is not provided or is invalid, the API will return a 400 error.
@@ -130,18 +140,23 @@ The API is designed to handle various errors gracefully:
 
 ---
 
-## Future Enhancements
-- Add support for multilingual queries.
-- Implement authentication and rate limiting.
-- Integrate a live database for real-time updates.
-- Add OCR support to extract medicine names from uploaded prescriptions.
+## 🚧 Future Enhancements
+- 🌐 Add support for multilingual queries.
+- 🔐 Implement authentication and rate limiting.
+- 🗃 Integrate a live database for real-time updates.
+- 🖼 Add OCR support to extract medicine names from uploaded prescriptions.
 
 ---
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+## 📜 License
+This project is licensed under the **MIT License**. See the LICENSE file for more details.
 
 ---
 
-## Contributing
+## 🤝 Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests to improve the API.
+
+---
+
+## 💡 Acknowledgments
+Special thanks to the contributors and the open-source community for their support and resources!
